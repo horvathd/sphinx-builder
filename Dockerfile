@@ -3,7 +3,6 @@ FROM fedora:35
 RUN dnf update -y && \
     dnf install -y make \
                    pip \
-                   pandoc \
                    latexmk \
                    texlive-anyfontsize \
                    texlive-capt-of \
