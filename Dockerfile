@@ -3,6 +3,8 @@ FROM fedora:35
 RUN dnf update -y && \
     dnf install -y make \
                    pip \
+                   wget \
+                   unzip \
                    latexmk \
                    texlive-anyfontsize \
                    texlive-capt-of \
@@ -23,5 +25,10 @@ RUN dnf update -y && \
                    texlive-upquote \
                    texlive-wrapfig && \
     dnf clean all && \
-    pip install --no-cache-dir sphinx==4.4.0 \
-                               sphinx-rtd-theme==1.0.0
+    cd /home && \
+    wget -q https://github.com/horvathd/sphinx/archive/refs/heads/fluka.zip && \
+    unzip fluka.zip && \
+    rm -rf fluka.zip && \
+    cd sphinx-fluka && \
+    pip install --no-cache-dir -e . && \
+    pip install --no-cache-dir sphinx-rtd-theme==1.0.0
