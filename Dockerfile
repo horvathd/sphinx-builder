@@ -23,6 +23,8 @@ RUN yum install -y \
         commath \
         dvisvgm \
         epstopdf-pkg \
+        esint \
+        etoolbox \
         fancyhdr \
         fancyvrb \
         float \
@@ -43,7 +45,9 @@ RUN yum install -y \
         ltxcmds \
         ncntrsbk \
         needspace \
+        newtx \
         noto \
+        notomath \
         oberdiek \
         parskip \
         pdftexcmds \
