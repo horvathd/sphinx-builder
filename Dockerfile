@@ -20,6 +20,7 @@ RUN yum install -y \
         babel-english \
         capt-of \
         cmap \
+        colortbl \
         commath \
         dvisvgm \
         epstopdf-pkg \
@@ -73,5 +74,6 @@ RUN yum install -y \
     unzip fluka.zip && \
     rm -rf fluka.zip && \
     cd sphinx-fluka && \
-    pip3 install --no-cache-dir -e . && \
-    pip3 install --no-cache-dir sphinx-rtd-theme==1.0.0
+    python3 -m pip install --no-cache-dir -U pip && \
+    python3 -m pip install --no-cache-dir -U -e . && \
+    python3 -m pip install --no-cache-dir -U sphinx-rtd-theme==1.1.1
