@@ -18,6 +18,7 @@ RUN yum install -y \
         amsmath \
         anyfontsize \
         babel-english \
+        booktabs \
         capt-of \
         cmap \
         colortbl \
